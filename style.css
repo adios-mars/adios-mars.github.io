@@ -1263,6 +1263,35 @@ textarea.form-input {
 .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+.contact-direct-card {
+    background: var(--border-gradient-onyx);
+    border: 1px solid var(--jet);
+    border-radius: 14px;
+    padding: 12px 18px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-direct-text {
+    color: var(--light-gray70);
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.contact-email-link {
+    color: var(--orange-yellow-crayola);
+    font-weight: var(--fw500);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    display: inline;
+}
+
+.contact-email-link:hover {
+    color: var(--white1);
+}
+
 /* MEDIA QUERIES */
 
 @media (min-width: 450px) {

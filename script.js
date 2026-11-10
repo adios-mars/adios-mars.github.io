@@ -74,7 +74,7 @@ for (let i = 0; i < filterBtn.length; i++) {
     });
 }
 
-// Contact Form Validation
+// Contact Form Validation & AJAX Submission
 const form = document.querySelector('[data-form]');
 const formInputs = document.querySelectorAll('[data-form-input]');
 const formBtn = document.querySelector('[data-form-btn]');
@@ -89,6 +89,61 @@ if (form && formBtn) {
             }
         });
     }
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const originalBtnHtml = formBtn.innerHTML;
+        formBtn.setAttribute('disabled', '');
+        formBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Sending...</span>';
+
+        const formData = new FormData(form);
+        const name = (formData.get('name') || '').trim();
+        const email = (formData.get('email') || '').trim();
+        const message = (formData.get('message') || '').trim();
+        const subject = formData.get('_subject') || 'New Portfolio Message from ' + name;
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/adiosruthe@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message,
+                    _subject: subject
+                })
+            });
+
+            const result = await response.json().catch(() => ({}));
+
+            if (response.ok && (result.success === 'true' || result.success === true)) {
+                formBtn.innerHTML = '<ion-icon name="checkmark-circle-outline"></ion-icon><span>Message Sent!</span>';
+                form.reset();
+                setTimeout(() => {
+                    formBtn.innerHTML = originalBtnHtml;
+                    formBtn.setAttribute('disabled', '');
+                }, 4000);
+            } else {
+                // If FormSubmit requires email activation confirmation
+                if (result.message && result.message.toLowerCase().includes('activation')) {
+                    alert('Action Required: FormSubmit sent an activation email to adiosruthe@gmail.com. Please open that email and click "Activate Form" so messages arrive automatically in your inbox!');
+                }
+                // Fallback to mailto so the user's message is never lost
+                window.location.href = `mailto:adiosruthe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+                formBtn.innerHTML = originalBtnHtml;
+                formBtn.removeAttribute('disabled');
+            }
+        } catch (err) {
+            // Direct mailto fallback on network error
+            window.location.href = `mailto:adiosruthe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+            formBtn.innerHTML = originalBtnHtml;
+            formBtn.removeAttribute('disabled');
+        }
+    });
 }
 
 // Page Navigation (Tabs: About, Resume, Portfolio, Blog, Contact)
