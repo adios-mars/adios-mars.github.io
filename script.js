@@ -127,21 +127,18 @@ if (form && formBtn) {
                     formBtn.innerHTML = originalBtnHtml;
                     formBtn.setAttribute('disabled', '');
                 }, 4000);
+            } else if (result.message && result.message.toLowerCase().includes('activation')) {
+                formBtn.innerHTML = '<ion-icon name="alert-circle-outline"></ion-icon><span>Activation needed in Gmail</span>';
+                alert('FormSubmit sent a confirmation email to adiosruthe@gmail.com.\n\nPlease open your Gmail inbox and click "Activate Form". Once you click it, all messages will go straight to your inbox!');
+                setTimeout(() => {
+                    formBtn.innerHTML = originalBtnHtml;
+                    formBtn.removeAttribute('disabled');
+                }, 5000);
             } else {
-                // If FormSubmit requires email activation confirmation
-                if (result.message && result.message.toLowerCase().includes('activation')) {
-                    alert('Action Required: FormSubmit sent an activation email to adiosruthe@gmail.com. Please open that email and click "Activate Form" so messages arrive automatically in your inbox!');
-                }
-                // Fallback to mailto so the user's message is never lost
-                window.location.href = `mailto:adiosruthe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
-                formBtn.innerHTML = originalBtnHtml;
-                formBtn.removeAttribute('disabled');
+                form.submit();
             }
         } catch (err) {
-            // Direct mailto fallback on network error
-            window.location.href = `mailto:adiosruthe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
-            formBtn.innerHTML = originalBtnHtml;
-            formBtn.removeAttribute('disabled');
+            form.submit();
         }
     });
 }
