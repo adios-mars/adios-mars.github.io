@@ -1070,104 +1070,6 @@ article.active {
     }
 }
 
-/* BLOG */
-
-.blog-posts { margin-bottom: 10px; }
-
-.blog-posts-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-:is(.blog-post-item, .blog-posts-item) > a {
-    position: relative;
-    background: var(--border-gradient-onyx);
-    height: 100%;
-    box-shadow: var(--shadow4);
-    border-radius: 16px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-:is(.blog-post-item, .blog-posts-item) > a::before {
-    content: '';
-    position: absolute;
-    inset: 1px;
-    border-radius: inherit;
-    background: var(--eerie-black1);
-    z-index: -1;
-}
-
-.blog-banner-box {
-    width: 100%;
-    height: 150px;
-    border-radius: 12px 12px 0 0;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: 15px;
-}
-
-.blog-bg-1 { background: linear-gradient(135deg, #102a36 0%, #1e4555 100%); }
-.blog-bg-2 { background: linear-gradient(135deg, #192a20 0%, #294635 100%); }
-.blog-bg-3 { background: linear-gradient(135deg, #2a1b3d 0%, #452a65 100%); }
-.blog-bg-4 { background: linear-gradient(135deg, #352614 0%, #563e1f 100%); }
-.blog-bg-5 { background: linear-gradient(135deg, #162a3e 0%, #254464 100%); }
-.blog-bg-6 { background: linear-gradient(135deg, #2b1d28 0%, #462c41 100%); }
-
-.blog-badge {
-    background: hsla(0, 0%, 0%, 0.7);
-    color: var(--orange-yellow-crayola);
-    border: 1px solid hsla(45, 100%, 72%, 0.25);
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: var(--fw500);
-}
-
-.blog-content { padding: 15px; flex-grow: 1; }
-
-.blog-meta {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 7px;
-    margin-bottom: 8px;
-}
-
-.blog-meta :is(.blog-category, time) {
-    color: var(--light-gray70);
-    font-size: var(--fs7);
-    font-weight: var(--fw300);
-}
-
-.blog-meta .dot {
-    background: var(--light-gray70);
-    width: 4px;
-    height: 4px;
-    border-radius: 4px;
-}
-
-.blog-item-title {
-    margin-bottom: 10px;
-    line-height: 1.35;
-    font-size: var(--fs4);
-    transition: var(--transition1);
-}
-
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
-
-.blog-text {
-    color: var(--light-gray);
-    font-size: var(--fs7);
-    font-weight: var(--fw300);
-    line-height: 1.6;
-    text-align: justify;
-}
-
 /* CONTACT */
 
 .mapbox {
@@ -1435,10 +1337,6 @@ textarea.form-input {
 
     .skills-item:not(:last-child) { margin-bottom: 25px; }
 
-    .blog-posts-list { gap: 30px; }
-
-    .blog-content { padding: 20px; }
-
     .mapbox {
         height: 380px;
         border-radius: 18px;
@@ -1500,7 +1398,7 @@ textarea.form-input {
     .filter-item button:hover { color: var(--light-gray70); }
     .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-    .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+    .project-list { grid-template-columns: 1fr 1fr; }
 
     .input-wrapper { grid-template-columns: 1fr 1fr; }
 
@@ -1560,8 +1458,7 @@ textarea.form-input {
         max-width: calc(100% - 460px);
     }
 
-    .project-list,
-    .blog-posts-list {
+    .project-list {
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
     }
@@ -1598,52 +1495,6 @@ textarea.form-input {
         height: 38px;
         font-size: 18px;
         border-radius: 10px;
-    }
-
-    :is(.blog-post-item, .blog-posts-item) > a {
-        border-radius: 14px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .blog-banner-box {
-        height: 135px;
-        border-radius: 12px 12px 0 0;
-        padding: 12px;
-    }
-
-    .blog-badge {
-        font-size: 10.5px;
-        padding: 3px 8px;
-    }
-
-    .blog-content {
-        padding: 14px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-
-    .blog-meta {
-        gap: 6px;
-        margin-bottom: 6px;
-    }
-
-    .blog-meta :is(.blog-category, time) {
-        font-size: 11.5px;
-    }
-
-    .blog-item-title {
-        font-size: 14px;
-        margin-bottom: 8px;
-        line-height: 1.35;
-    }
-
-    .blog-text {
-        font-size: 12px;
-        line-height: 1.48;
-        text-align: left;
     }
 }
 
