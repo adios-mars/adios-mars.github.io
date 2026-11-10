@@ -1,0 +1,183 @@
+import os
+
+images_dir = "/home/mars/Projects/Portfolio/assets/images"
+os.makedirs(images_dir, exist_ok=True)
+
+svg_content = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="win-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111823"/>
+      <stop offset="50%" stop-color="#16202e"/>
+      <stop offset="100%" stop-color="#0c121b"/>
+    </linearGradient>
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00dfd8"/>
+      <stop offset="100%" stop-color="#0072f5"/>
+    </linearGradient>
+    <linearGradient id="accent-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffdb70"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="bubble-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2c3f"/>
+      <stop offset="100%" stop-color="#172231"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Main Window Frame -->
+  <rect width="800" height="500" rx="16" fill="url(#win-bg)" stroke="#223247" stroke-width="1.5"/>
+
+  <!-- Top Title Bar -->
+  <rect width="800" height="42" rx="16" fill="#141c28"/>
+  <rect y="26" width="800" height="16" fill="#141c28"/>
+  <circle cx="28" cy="21" r="6" fill="#ff5f56"/>
+  <circle cx="48" cy="21" r="6" fill="#ffbd2e"/>
+  <circle cx="68" cy="21" r="6" fill="#27c93f"/>
+  <text x="400" y="26" fill="#889db5" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="600" text-anchor="middle">Multi-User Chat System — Concurrent POSIX Sockets (C Engine)</text>
+
+  <!-- Left Sidebar (Channels & Users) -->
+  <g transform="translate(0, 42)">
+    <rect width="210" height="458" fill="#0f1620"/>
+    <line x1="210" y1="0" x2="210" y2="458" stroke="#1d2a3a" stroke-width="1"/>
+
+    <!-- App Brand -->
+    <g transform="translate(18, 22)">
+      <circle cx="12" cy="12" r="12" fill="url(#accent-gold)"/>
+      <text x="12" y="16" fill="#000000" font-family="sans-serif" font-size="12" font-weight="900" text-anchor="middle">⚡</text>
+      <text x="32" y="16" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700">ChatMesh C</text>
+      <text x="32" y="28" fill="#ffdb70" font-family="sans-serif" font-size="9.5" font-weight="600">TCP PORT: 8080</text>
+    </g>
+
+    <!-- Room Channels Header -->
+    <text x="18" y="80" fill="#586f87" font-family="sans-serif" font-size="10" font-weight="700" letter-spacing="0.5">ROOM CHANNELS</text>
+
+    <!-- Channel 1 -->
+    <g transform="translate(12, 92)">
+      <rect width="186" height="30" rx="6" fill="#1a2533"/>
+      <text x="14" y="20" fill="#ffdb70" font-family="monospace" font-size="12" font-weight="700">#</text>
+      <text x="28" y="20" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="600">systems-lab</text>
+      <circle cx="170" cy="15" r="4" fill="#00dfd8"/>
+    </g>
+
+    <!-- Channel 2 -->
+    <g transform="translate(12, 126)">
+      <text x="14" y="20" fill="#586f87" font-family="monospace" font-size="12" font-weight="700">#</text>
+      <text x="28" y="20" fill="#889db5" font-family="sans-serif" font-size="12">general</text>
+    </g>
+
+    <!-- Channel 3 -->
+    <g transform="translate(12, 156)">
+      <text x="14" y="20" fill="#586f87" font-family="monospace" font-size="12" font-weight="700">#</text>
+      <text x="28" y="20" fill="#889db5" font-family="sans-serif" font-size="12">file-transfers</text>
+    </g>
+
+    <!-- Active Threads / Users -->
+    <text x="18" y="215" fill="#586f87" font-family="sans-serif" font-size="10" font-weight="700" letter-spacing="0.5">CONNECTED CLIENTS (3)</text>
+
+    <!-- User 1 (Ruth) -->
+    <g transform="translate(14, 230)">
+      <circle cx="12" cy="12" r="10" fill="#2d2244"/>
+      <text x="12" y="16" fill="#ffdb70" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle">R</text>
+      <circle cx="20" cy="19" r="3.5" fill="#22c55e" stroke="#0f1620" stroke-width="1"/>
+      <text x="30" y="16" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="600">adios-mars</text>
+    </g>
+
+    <!-- User 2 -->
+    <g transform="translate(14, 265)">
+      <circle cx="12" cy="12" r="10" fill="#1b2a38"/>
+      <text x="12" y="16" fill="#00dfd8" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle">1</text>
+      <circle cx="20" cy="19" r="3.5" fill="#22c55e" stroke="#0f1620" stroke-width="1"/>
+      <text x="30" y="16" fill="#889db5" font-family="sans-serif" font-size="11.5">client_192.168</text>
+    </g>
+
+    <!-- User 3 -->
+    <g transform="translate(14, 300)">
+      <circle cx="12" cy="12" r="10" fill="#1b2a38"/>
+      <text x="12" y="16" fill="#00dfd8" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle">2</text>
+      <circle cx="20" cy="19" r="3.5" fill="#22c55e" stroke="#0f1620" stroke-width="1"/>
+      <text x="30" y="16" fill="#889db5" font-family="sans-serif" font-size="11.5">worker_thread_2</text>
+    </g>
+
+    <!-- Mutex Status Badge -->
+    <g transform="translate(12, 400)">
+      <rect width="186" height="34" rx="6" fill="#131c26" stroke="#1d2a3a" stroke-width="1"/>
+      <circle cx="14" cy="17" r="4" fill="#22c55e"/>
+      <text x="24" y="21" fill="#75a894" font-family="monospace" font-size="10">MUTEX LOCKS: SAFE</text>
+    </g>
+  </g>
+
+  <!-- Right Main Chat Area -->
+  <g transform="translate(210, 42)">
+    <!-- Room Top Header -->
+    <rect width="590" height="48" fill="#131a24"/>
+    <line x1="0" y1="48" x2="590" y2="48" stroke="#1d2a3a" stroke-width="1"/>
+    <text x="24" y="29" fill="#ffdb70" font-family="monospace" font-size="16" font-weight="800">#</text>
+    <text x="40" y="29" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">systems-lab</text>
+    <text x="135" y="29" fill="#6985a2" font-family="sans-serif" font-size="11.5">&mdash; Multi-client TCP broadcast &amp; peer stream transfers</text>
+
+    <!-- Chat Messages Stream -->
+    <g transform="translate(24, 65)">
+      <!-- Message 1 from client -->
+      <g>
+        <circle cx="16" cy="16" r="16" fill="#1a2d3e"/>
+        <text x="16" y="21" fill="#00dfd8" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">C1</text>
+        <text x="44" y="14" fill="#00dfd8" font-family="sans-serif" font-size="12" font-weight="700">client_192.168</text>
+        <text x="145" y="14" fill="#586f87" font-family="sans-serif" font-size="10.5">Today at 10:14 AM</text>
+        
+        <rect x="44" y="24" width="460" height="36" rx="8" fill="url(#bubble-bg)"/>
+        <text x="56" y="47" fill="#e2edf8" font-family="sans-serif" font-size="12.5">Worker thread allocated. Sending test data payload to broadcast room.</text>
+      </g>
+
+      <!-- Message 2 from Ruth (adios-mars) -->
+      <g transform="translate(0, 75)">
+        <circle cx="16" cy="16" r="16" fill="url(#accent-gold)"/>
+        <text x="16" y="21" fill="#000000" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">R</text>
+        <text x="44" y="14" fill="#ffdb70" font-family="sans-serif" font-size="12" font-weight="700">adios-mars</text>
+        <rect x="120" y="2" width="55" height="16" rx="4" fill="#382914"/>
+        <text x="147" y="14" fill="#ffdb70" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">ADMIN</text>
+        <text x="185" y="14" fill="#586f87" font-family="sans-serif" font-size="10.5">Today at 10:15 AM</text>
+
+        <rect x="44" y="24" width="480" height="36" rx="8" fill="#252c1e" stroke="#ffdb70" stroke-width="0.8"/>
+        <text x="56" y="47" fill="#ffffff" font-family="sans-serif" font-size="12.5">Incoming socket frame acknowledged. Initiating chunked file stream protocol.</text>
+      </g>
+
+      <!-- Rich File Transfer Card inside Chat -->
+      <g transform="translate(44, 150)">
+        <rect width="490" height="85" rx="10" fill="#141e2b" stroke="#00dfd8" stroke-width="1.2" filter="url(#card-shadow)"/>
+        
+        <!-- File Icon -->
+        <rect x="16" y="18" width="46" height="50" rx="6" fill="#1a2d3e"/>
+        <text x="39" y="49" fill="#00dfd8" font-family="sans-serif" font-size="20" text-anchor="middle">📄</text>
+
+        <!-- File Details -->
+        <text x="74" y="36" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700">kernel_network_protocol.c</text>
+        <text x="74" y="54" fill="#6985a2" font-family="sans-serif" font-size="11">8.2 MB &bull; 8,192-byte frames &bull; Socket Stream</text>
+
+        <!-- Progress Bar -->
+        <g transform="translate(74, 62)">
+          <rect width="320" height="6" rx="3" fill="#1d2a3a"/>
+          <rect width="320" height="6" rx="3" fill="url(#accent-cyan)"/>
+        </g>
+        <text x="405" y="68" fill="#00dfd8" font-family="monospace" font-size="11" font-weight="700">100% OK</text>
+      </g>
+    </g>
+
+    <!-- Bottom Message Input Bar -->
+    <g transform="translate(24, 385)">
+      <rect width="540" height="44" rx="10" fill="#141c28" stroke="#223247" stroke-width="1"/>
+      <circle cx="24" cy="22" r="12" fill="#1c2738"/>
+      <text x="24" y="26" fill="#889db5" font-family="sans-serif" font-size="14" text-anchor="middle">+</text>
+      <text x="46" y="26" fill="#586f87" font-family="sans-serif" font-size="12">Type a message in #systems-lab or transfer a file...</text>
+      <circle cx="516" cy="22" r="14" fill="url(#accent-gold)"/>
+      <text x="516" y="26" fill="#000000" font-family="sans-serif" font-size="13" font-weight="900" text-anchor="middle">&gt;</text>
+    </g>
+  </g>
+</svg>'''
+
+with open(os.path.join(images_dir, "chat_modern.svg"), "w") as f:
+    f.write(svg_content)
+
+print("Modern chat mockup generated!")

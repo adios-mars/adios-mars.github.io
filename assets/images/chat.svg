@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="term-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1613"/>
+      <stop offset="100%" stop-color="#050a08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window Frame -->
+  <rect width="800" height="500" rx="16" fill="url(#term-bg)" stroke="#1d382d" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="42" rx="16" fill="#14261f"/>
+  <rect y="26" width="800" height="16" fill="#14261f"/>
+  <circle cx="28" cy="21" r="6" fill="#ff5f56"/>
+  <circle cx="48" cy="21" r="6" fill="#ffbd2e"/>
+  <circle cx="68" cy="21" r="6" fill="#27c93f"/>
+  <text x="400" y="26" fill="#75a894" font-family="monospace" font-size="13" font-weight="600" text-anchor="middle">mars@systems-lab: ~/chat_project (c / posix sockets)</text>
+
+  <!-- Terminal Content -->
+  <g transform="translate(35, 75)" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13">
+    <!-- Command -->
+    <text x="0" y="0" fill="#00ffaa" font-weight="700">mars@lab:~$</text>
+    <text x="110" y="0" fill="#ffffff">./server --port 8080 --threads 16 --nonblock</text>
+
+    <!-- Server Output -->
+    <text x="0" y="32" fill="#69857b">[INIT]</text>
+    <text x="60" y="32" fill="#9cd6c3">Socket descriptor created (AF_INET, SOCK_STREAM)</text>
+
+    <text x="0" y="60" fill="#69857b">[BIND]</text>
+    <text x="60" y="60" fill="#9cd6c3">Bound successfully to 0.0.0.0:8080 (SO_REUSEADDR enabled)</text>
+
+    <text x="0" y="88" fill="#69857b">[LISTEN]</text>
+    <text x="60" y="88" fill="#00ffaa">Master accept loop listening for concurrent connections...</text>
+
+    <!-- Client Events -->
+    <text x="0" y="125" fill="#facc15">[CONNECT]</text>
+    <text x="85" y="125" fill="#ffffff">Client #1 connected from 127.0.0.1:54210 -> pthread_create(worker_1)</text>
+
+    <text x="0" y="153" fill="#facc15">[AUTH]</text>
+    <text x="85" y="153" fill="#ffffff">Handshake verified: user &apos;adios-mars&apos; registered to #systems</text>
+
+    <text x="0" y="181" fill="#facc15">[CONNECT]</text>
+    <text x="85" y="181" fill="#ffffff">Client #2 connected from 127.0.0.1:54218 -> pthread_create(worker_2)</text>
+
+    <text x="0" y="218" fill="#38bdf8">[FILE_TRANSFER]</text>
+    <text x="135" y="218" fill="#e0f2fe">Chunked stream started: kernel_image.iso (42.8 MB)</text>
+
+    <text x="0" y="246" fill="#38bdf8">[FRAMING]</text>
+    <text x="135" y="246" fill="#93c5fd">8192-byte frames | SHA-256 handshake: VERIFIED | zero packet loss</text>
+
+    <text x="0" y="280" fill="#4ade80">[MUTEX]</text>
+    <text x="85" y="280" fill="#86efac">pthread_mutex_lock(&amp;room_registry_lock) -> 0 contention deadlocks</text>
+
+    <!-- Prompt with blinking cursor -->
+    <text x="0" y="335" fill="#00ffaa" font-weight="700">mars@lab:~$</text>
+    <text x="110" y="335" fill="#ffffff">netstat -tulpn | grep 8080</text>
+    <rect x="365" y="322" width="9" height="17" fill="#00ffaa"/>
+
+    <!-- Bottom specs bar -->
+    <g transform="translate(0, 370)">
+      <rect width="730" height="30" rx="6" fill="#14261f" stroke="#1d382d" stroke-width="1"/>
+      <text x="15" y="20" fill="#75a894" font-size="11">POLL / EPOLL</text>
+      <text x="120" y="20" fill="#75a894" font-size="11">POSIX THREADS</text>
+      <text x="240" y="20" fill="#75a894" font-size="11">RAW BERKELEY SOCKETS</text>
+      <text x="430" y="20" fill="#00ffaa" font-size="11" font-weight="700">STATUS: ACTIVE 0% PACKET DROP</text>
+    </g>
+  </g>
+</svg>

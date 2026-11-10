@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Ruth Yeneneh — Software Engineer</title>
+    <meta name="description" content="Portfolio of Ruth Yeneneh (@adios-mars) — Software Engineer building practical systems, mobile applications, and modern web platforms.">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/250560417?v=4" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!-- SIDEBAR -->
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="https://avatars.githubusercontent.com/u/250560417?v=4" alt="Ruth Yeneneh" width="80">
+                </figure>
+
+                <div class="info-content">
+                    <h1 class="name" title="Ruth Yeneneh">Ruth Yeneneh</h1>
+                    <p class="title">Software Engineer</p>
+                </div>
+
+                <button class="info-more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+
+            <div class="sidebar-info-more">
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:adiosruthe@gmail.com" class="contact-link" title="adiosruthe@gmail.com">adiosruthe@gmail.com</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">GitHub</p>
+                            <a href="https://github.com/adios-mars" target="_blank" rel="noopener noreferrer" class="contact-link">@adios-mars</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/ruth-yeneneh" target="_blank" rel="noopener noreferrer" class="contact-link">@ruth-yeneneh</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Addis Ababa, Ethiopia</address>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://github.com/adios-mars" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/ruth-yeneneh" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://x.com/adios_mars" target="_blank" rel="noopener noreferrer" class="social-link" title="X (Twitter)">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Discord: @adios-mars">
+                            <ion-icon name="logo-discord"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <div class="main-content">
+            <!-- NAVBAR -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+                </ul>
+            </nav>
+
+            <!-- ABOUT TAB -->
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About Me</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>
+                        I'm a <strong>Software Engineer</strong> building practical systems, mobile applications, and modern web platforms. I help bring your ideas to life with clean, high-performance software designed to solve real-world problems.
+                    </p>
+                </section>
+
+                <!-- WHAT I'M DOING -->
+                <section class="service">
+                    <h3 class="h3 service-title">What I'm Doing</h3>
+
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="hardware-chip-outline" style="font-size: 32px; color: var(--orange-yellow-crayola);"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Systems &amp; Networking</h4>
+                                <p class="service-item-text">Concurrent client-server architectures in C, POSIX threads, Berkeley TCP sockets, and custom framed communication protocols.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="code-slash-outline" style="font-size: 32px; color: var(--orange-yellow-crayola);"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Web Platforms</h4>
+                                <p class="service-item-text">Modern, design-led full-stack web applications using React 19, Next.js, TypeScript, Tailwind CSS, Supabase, and Firebase.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="phone-portrait-outline" style="font-size: 32px; color: var(--orange-yellow-crayola);"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Mobile Engineering</h4>
+                                <p class="service-item-text">High-performance cross-platform applications built with Flutter and Dart, integrating live GPS tracking and OpenStreetMap routing.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="terminal-outline" style="font-size: 32px; color: var(--orange-yellow-crayola);"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Backend &amp; Automation</h4>
+                                <p class="service-item-text">Asynchronous automation bots and services in Python (Aiogram 3, Asyncio), REST APIs, and relational SQLite/PostgreSQL schemas.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+
+
+                <!-- TECH STACK & TOOLS -->
+                <section class="clients">
+                    <h3 class="h3 clients-title">Core Technologies</h3>
+
+                    <ul class="clients-list has-scrollbar">
+                        <li class="clients-item tech-pill"><span>React 19</span></li>
+                        <li class="clients-item tech-pill"><span>Next.js</span></li>
+                        <li class="clients-item tech-pill"><span>Flutter / Dart</span></li>
+                        <li class="clients-item tech-pill"><span>C / POSIX</span></li>
+                        <li class="clients-item tech-pill"><span>Python</span></li>
+                        <li class="clients-item tech-pill"><span>Tailwind CSS</span></li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- RESUME TAB -->
+            <article class="resume" data-page="resume">
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+
+                <!-- EDUCATION -->
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="school-outline"></ion-icon></div>
+                        <h3 class="h3">Education</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">B.Sc. in Software Engineering</h4>
+                            <p class="timeline-text">
+                                Studying core software engineering fundamentals—data structures, system design, and software architecture. Passionate about learning by building and applying engineering principles to practical, open-source software.
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- EXPERIENCE -->
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+                        <h3 class="h3">Experience</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Open-Source Software Engineer</h4>
+                            <p class="timeline-text">
+                                Architecting, developing, and deploying open-source applications and systems tools. Built <strong>Taxi Ale</strong>, a zero-cost real-time minibus tracking platform for Addis Ababa with Flutter and OpenStreetMap, and <strong>Katch</strong>, a collaborative reading discovery hub using React 19 and Tailwind CSS.
+                            </p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Systems &amp; Network Developer</h4>
+                            <p class="timeline-text">
+                                Engineered multi-threaded client-server network applications in C utilizing raw Berkeley TCP sockets, POSIX threads, and granular mutex synchronization. Implemented chunked file transfers (8KB frames) and dynamic room routing with zero socket blocking.
+                            </p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Full-Stack &amp; Bot Developer</h4>
+                            <p class="timeline-text">
+                                Developed enterprise-grade Telegram automation tools in Python (Aiogram 3, Asyncio, SQLite) including campus attendance tracking systems with automated reporting, role-based authorization, and real-time state machine dispatchers.
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- SKILLS -->
+                <section class="skill">
+                    <h3 class="h3 skills-title">Technical Skills</h3>
+
+                    <ul class="skills-list content-card">
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">React 19 / Next.js / TypeScript</h5>
+                                <data value="92">92%</data>
+                            </div>
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 92%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Flutter &amp; Dart (Cross-Platform Mobile)</h5>
+                                <data value="88">88%</data>
+                            </div>
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 88%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Systems Programming (C, POSIX Threads, Berkeley Sockets)</h5>
+                                <data value="82">82%</data>
+                            </div>
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 82%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Tailwind CSS v4 &amp; UI / UX Engineering</h5>
+                                <data value="94">94%</data>
+                            </div>
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 94%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Python (Aiogram 3, Asyncio, Automation)</h5>
+                                <data value="84">84%</data>
+                            </div>
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 84%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Databases &amp; Cloud (Supabase, Firebase, SQLite, PostgreSQL)</h5>
+                                <data value="85">85%</data>
+                            </div>
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 85%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- PROJECTS TAB -->
+            <article class="projects" data-page="projects">
+                <header>
+                    <h2 class="h2 article-title">Projects</h2>
+                </header>
+
+                <section class="projects">
+                    <!-- Filter buttons for larger screens -->
+                    <ul class="filter-list">
+                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+                        <li class="filter-item"><button data-filter-btn>Mobile</button></li>
+                        <li class="filter-item"><button data-filter-btn>Web Development</button></li>
+                        <li class="filter-item"><button data-filter-btn>Systems</button></li>
+                    </ul>
+
+                    <!-- Filter dropdown for small screens -->
+                    <div class="filter-select-box">
+                        <button class="filter-select" data-select>
+                            <div class="select-value" data-select-value>Select Category</div>
+                            <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+                        </button>
+
+                        <ul class="select-list">
+                            <li class="select-item"><button data-select-item>All</button></li>
+                            <li class="select-item"><button data-select-item>Mobile</button></li>
+                            <li class="select-item"><button data-select-item>Web Development</button></li>
+                            <li class="select-item"><button data-select-item>Systems</button></li>
+                        </ul>
+                    </div>
+
+                    <!-- Project Cards -->
+                    <ul class="project-list">
+                        <!-- Project 1: Taxi Ale -->
+                        <li class="project-item active" data-filter-item data-category="mobile">
+                            <div class="project-card">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <a href="https://github.com/adios-mars/taxi-ale" target="_blank" rel="noopener noreferrer" class="icon-box-btn" title="View Source on GitHub">
+                                            <ion-icon name="logo-github"></ion-icon>
+                                        </a>
+                                    </div>
+                                    <img src="./assets/images/taxi_ale.png" alt="Taxi Ale Minibus Transit Navigator" class="taxi-cover" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Taxi Ale (ታክሲ አለ)</h3>
+                                <p class="project-category">Mobile &middot; Flutter &amp; Dart</p>
+                                <p class="project-desc">Real-time minibus transit tracking and seat availability for Addis Ababa built with Flutter, OpenStreetMap, and OSRM routing.</p>
+                            </div>
+                        </li>
+
+                        <!-- Project 2: Katch -->
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <div class="project-card">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <a href="https://github.com/adios-mars/Katch" target="_blank" rel="noopener noreferrer" class="icon-box-btn" title="View Source on GitHub">
+                                            <ion-icon name="logo-github"></ion-icon>
+                                        </a>
+                                        <a href="https://adios-mars.github.io/Katch" target="_blank" rel="noopener noreferrer" class="icon-box-btn" title="Open Live Website">
+                                            <ion-icon name="globe-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                    <img src="./assets/images/katch.png" alt="Katch Book Platform" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Katch</h3>
+                                <p class="project-category">Web Development &middot; React 19</p>
+                                <p class="project-desc">A community-driven reading tracker and social book discovery platform with real-time reading clubs and personal library management.</p>
+                            </div>
+                        </li>
+
+                        <!-- Project 3: Multi-User Chat System -->
+                        <li class="project-item active" data-filter-item data-category="systems">
+                            <div class="project-card">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <a href="https://github.com/adios-mars/multi-user-chat-system" target="_blank" rel="noopener noreferrer" class="icon-box-btn" title="View Source on GitHub">
+                                            <ion-icon name="logo-github"></ion-icon>
+                                        </a>
+                                    </div>
+                                    <img src="./assets/images/chat.png" alt="Multi-User Chat System" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Multi-User Chat System</h3>
+                                <p class="project-category">Systems &middot; Linux &amp; C</p>
+                                <p class="project-desc">Concurrent client-server chat application implemented in C using POSIX threads, raw Berkeley sockets, room routing, and 8KB framed file transfers.</p>
+                            </div>
+                        </li>
+
+                        <!-- Project 4: Campus Attendance Bot -->
+                        <li class="project-item active" data-filter-item data-category="systems">
+                            <div class="project-card">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <a href="https://github.com/adios-mars/campus-attendance-bot" target="_blank" rel="noopener noreferrer" class="icon-box-btn" title="View Source on GitHub">
+                                            <ion-icon name="logo-github"></ion-icon>
+                                        </a>
+                                    </div>
+                                    <img src="./assets/images/attendance.jpg" alt="Campus Attendance Bot" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Campus Attendance Bot</h3>
+                                <p class="project-category">Systems &middot; Python &amp; Asyncio</p>
+                                <p class="project-desc">Enterprise-grade Telegram attendance tracking system with automated session logs, role management, and SQLite database persistence.</p>
+                            </div>
+                        </li>
+
+                        <!-- Project 5: Addis Market Tracker -->
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <div class="project-card">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <a href="https://github.com/adios-mars/addis-market-tracker" target="_blank" rel="noopener noreferrer" class="icon-box-btn" title="View Source on GitHub">
+                                            <ion-icon name="logo-github"></ion-icon>
+                                        </a>
+                                        <a href="https://addis-market-tracker.onrender.com" target="_blank" rel="noopener noreferrer" class="icon-box-btn" title="Open Live Website / App">
+                                            <ion-icon name="globe-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                    <img src="./assets/images/addis_market_screen.png" alt="Addis Market Tracker Web App" class="screen-top" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Addis Market Tracker</h3>
+                                <p class="project-category">Web Development &middot; FastAPI &amp; Python</p>
+                                <p class="project-desc">A web platform and Telegram Mini App that tracks daily staple food prices across Addis Ababa (Merkato, Atkilt Tera, Shola, and Piassa) with verified cross-market comparisons.</p>
+                            </div>
+                        </li>
+
+                        <!-- Project 6: Veda Voice Assistant -->
+                        <li class="project-item active" data-filter-item data-category="systems">
+                            <div class="project-card">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <a href="https://github.com/adios-mars/veda-voice-assistant" target="_blank" rel="noopener noreferrer" class="icon-box-btn" title="View Source on GitHub">
+                                            <ion-icon name="logo-github"></ion-icon>
+                                        </a>
+                                    </div>
+                                    <img src="./assets/images/veda.png" alt="Veda AI Voice Assistant" class="veda-cover" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Veda — AI Voice Assistant</h3>
+                                <p class="project-category">Systems &middot; Voice AI &amp; Python</p>
+                                <p class="project-desc">Low-latency conversational AI voice assistant featuring WebRTC voice activity detection, Deepgram Nova-2 streaming STT, Edge-TTS, and multi-model LLM failover.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- BLOG TAB -->
+            <article class="blog" data-page="blog">
+                <header>
+                    <h2 class="h2 article-title">Blog</h2>
+                </header>
+
+                <section class="blog-posts">
+                    <ul class="blog-posts-list">
+                        <li class="blog-post-item">
+                            <a href="https://github.com/adios-mars/taxi-ale" target="_blank" rel="noopener noreferrer">
+                                <figure class="blog-banner-box blog-bg-1">
+                                    <div class="blog-badge">Mobile Architecture</div>
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Flutter &middot; OSM</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2026-10-28">Oct 28, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">Zero-Cost Transit Tracking with Flutter &amp; OpenStreetMap</h3>
+                                    <p class="blog-text">How Taxi Ale eliminates proprietary map billing dependencies by coupling OpenStreetMap tiles with the OSRM road geometry engine and two-phase device GPS caching.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="https://github.com/adios-mars/multi-user-chat-system" target="_blank" rel="noopener noreferrer">
+                                <figure class="blog-banner-box blog-bg-2">
+                                    <div class="blog-badge">Systems Programming</div>
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">C &middot; Networking</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2026-10-14">Oct 14, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">Building Multi-Threaded Socket Servers in C</h3>
+                                    <p class="blog-text">Engineering a concurrent client-server chat application with raw Berkeley TCP sockets, POSIX threads, granular mutex synchronization, and chunked file transfer protocol.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="https://github.com/adios-mars/Katch" target="_blank" rel="noopener noreferrer">
+                                <figure class="blog-banner-box blog-bg-3">
+                                    <div class="blog-badge">Web Engineering</div>
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">React 19 &middot; Supabase</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2026-09-05">Sep 05, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">Reactive Book Discovery with React 19 &amp; Supabase</h3>
+                                    <p class="blog-text">Architectural takeaways from developing Katch: real-time channel subscriptions, optimistic state management, and modern styling with Tailwind CSS v4.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="https://github.com/adios-mars/campus-attendance-bot" target="_blank" rel="noopener noreferrer">
+                                <figure class="blog-banner-box blog-bg-4">
+                                    <div class="blog-badge">Backend &amp; Bots</div>
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Python &middot; Automation</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2026-08-18">Aug 18, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">Asynchronous Telegram Bot Systems with Aiogram 3</h3>
+                                    <p class="blog-text">Structuring production Telegram bots with state-machine routers, connection pooling, and automated SQLite attendance logging in Python.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="https://github.com/adios-mars/taxi-ale" target="_blank" rel="noopener noreferrer">
+                                <figure class="blog-banner-box blog-bg-5">
+                                    <div class="blog-badge">Geolocation</div>
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Mobile &middot; Geocoding</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2026-07-22">Jul 22, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">Two-Phase GPS Retrieval &amp; Battery Optimization</h3>
+                                    <p class="blog-text">Eliminating cold-start map freezes in transit apps by reading cached device location first before transitioning into precision satellite fixes with debounced reverse geocoding.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="https://github.com/adios-mars" target="_blank" rel="noopener noreferrer">
+                                <figure class="blog-banner-box blog-bg-6">
+                                    <div class="blog-badge">Software Engineering</div>
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Fundamentals</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2026-06-10">Jun 10, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">Why Low-Level Systems Knowledge Makes You a Better Web Engineer</h3>
+                                    <p class="blog-text">How understanding TCP framing, kernel buffers, memory allocation, and concurrency fundamentals reshapes how you write distributed web applications.</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- CONTACT TAB -->
+            <article class="contact" data-page="contact">
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+
+                <!-- MAPBOX (Addis Ababa, Ethiopia) -->
+                <section class="mapbox" data-mapbox>
+                    <figure>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126115.11523412533!2d38.706173099999995!3d8.963176799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set"
+                            width="400" 
+                            height="300" 
+                            loading="lazy"
+                            title="Map of Addis Ababa, Ethiopia">
+                        </iframe>
+                    </figure>
+                </section>
+
+                <!-- CONTACT FORM -->
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Send a Message</h3>
+
+                    <form action="https://formsubmit.co/adiosruthe@gmail.com" method="POST" class="form" data-form>
+                        <!-- FormSubmit settings -->
+                        <input type="hidden" name="_subject" value="New Portfolio Message for Ruth Yeneneh">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="input-wrapper">
+                            <input type="text" name="name" class="form-input" placeholder="Your Name" required data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
+                        </div>
+
+                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+                        <button class="form-btn" type="submit" disabled data-form-btn>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Portfolio Interactive Logic -->
+    <script src="script.js"></script>
+</body>
+</html>

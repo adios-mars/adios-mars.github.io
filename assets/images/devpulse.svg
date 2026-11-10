@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="db-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131f"/>
+      <stop offset="50%" stop-color="#141c2c"/>
+      <stop offset="100%" stop-color="#0a0e17"/>
+    </linearGradient>
+    <linearGradient id="bar-cyan" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0072f5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00dfd8"/>
+    </linearGradient>
+    <linearGradient id="bar-purple" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7928ca" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff0080"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c263b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#131b2b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="glow-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00dfd8"/>
+      <stop offset="50%" stop-color="#7928ca"/>
+      <stop offset="100%" stop-color="#ff0080"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Frame -->
+  <rect width="800" height="500" rx="16" fill="url(#db-bg)" stroke="#22304d" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="42" rx="16" fill="#162033"/>
+  <rect y="26" width="800" height="16" fill="#162033"/>
+  <circle cx="28" cy="21" r="6" fill="#ff5f56"/>
+  <circle cx="48" cy="21" r="6" fill="#ffbd2e"/>
+  <circle cx="68" cy="21" r="6" fill="#27c93f"/>
+  <text x="400" y="26" fill="#889fc6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" text-anchor="middle">DevPulse — Developer Metrics &amp; Engineering Analytics</text>
+
+  <!-- Top Metric Cards -->
+  <g transform="translate(30, 60)">
+    <!-- Card 1 -->
+    <rect width="230" height="80" rx="12" fill="url(#card-grad)" stroke="#263654" stroke-width="1"/>
+    <text x="18" y="26" fill="#889fc6" font-family="sans-serif" font-size="11" font-weight="600">COMMIT VELOCITY</text>
+    <text x="18" y="55" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="800">1,482</text>
+    <rect x="150" y="38" width="65" height="22" rx="11" fill="#14382c"/>
+    <text x="182" y="53" fill="#00dfd8" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">+24.8%</text>
+
+    <!-- Card 2 -->
+    <rect x="255" width="230" height="80" rx="12" fill="url(#card-grad)" stroke="#263654" stroke-width="1"/>
+    <text x="273" y="26" fill="#889fc6" font-family="sans-serif" font-size="11" font-weight="600">PR CYCLE TIME</text>
+    <text x="273" y="55" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="800">1.8 hrs</text>
+    <rect x="405" y="38" width="65" height="22" rx="11" fill="#382142"/>
+    <text x="437" y="53" fill="#ff70ba" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">-32.4%</text>
+
+    <!-- Card 3 -->
+    <rect x="510" width="230" height="80" rx="12" fill="url(#card-grad)" stroke="#263654" stroke-width="1"/>
+    <text x="528" y="26" fill="#889fc6" font-family="sans-serif" font-size="11" font-weight="600">CI/CD PASS RATE</text>
+    <text x="528" y="55" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="800">99.4%</text>
+    <rect x="660" y="38" width="65" height="22" rx="11" fill="#14382c"/>
+    <text x="692" y="53" fill="#22c55e" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">STABLE</text>
+  </g>
+
+  <!-- Main Chart Section -->
+  <g transform="translate(30, 155)">
+    <rect width="485" height="260" rx="12" fill="url(#card-grad)" stroke="#263654" stroke-width="1"/>
+    <text x="22" y="30" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Engineering Output &amp; Frequency</text>
+    <text x="22" y="50" fill="#889fc6" font-family="sans-serif" font-size="11">Daily code activity across 14 active repositories</text>
+
+    <!-- Grid lines -->
+    <g stroke="#1e2c45" stroke-width="1" stroke-dasharray="4 4" opacity="0.6">
+      <line x1="22" y1="80" x2="465" y2="80"/>
+      <line x1="22" y1="125" x2="465" y2="125"/>
+      <line x1="22" y1="170" x2="465" y2="170"/>
+      <line x1="22" y1="215" x2="465" y2="215"/>
+    </g>
+
+    <!-- Glowing Area Line Chart -->
+    <path d="M30 195 Q 70 180, 100 130 T 170 145 T 240 85 T 310 120 T 380 70 T 450 90" fill="none" stroke="url(#glow-line)" stroke-width="3" filter="url(#glow)"/>
+    <path d="M30 195 Q 70 180, 100 130 T 170 145 T 240 85 T 310 120 T 380 70 T 450 90 L 450 220 L 30 220 Z" fill="url(#bar-cyan)" opacity="0.15"/>
+
+    <!-- Bar Chart in Background -->
+    <g transform="translate(40, 0)">
+      <rect x="0" y="160" width="16" height="55" rx="4" fill="url(#bar-cyan)"/>
+      <rect x="40" y="140" width="16" height="75" rx="4" fill="url(#bar-cyan)"/>
+      <rect x="80" y="110" width="16" height="105" rx="4" fill="url(#bar-purple)"/>
+      <rect x="120" y="130" width="16" height="85" rx="4" fill="url(#bar-cyan)"/>
+      <rect x="160" y="80" width="16" height="135" rx="4" fill="url(#bar-purple)"/>
+      <rect x="200" y="105" width="16" height="110" rx="4" fill="url(#bar-cyan)"/>
+      <rect x="240" y="120" width="16" height="95" rx="4" fill="url(#bar-cyan)"/>
+      <rect x="280" y="70" width="16" height="145" rx="4" fill="url(#bar-purple)"/>
+      <rect x="320" y="90" width="16" height="125" rx="4" fill="url(#bar-purple)"/>
+      <rect x="360" y="85" width="16" height="130" rx="4" fill="url(#bar-cyan)"/>
+    </g>
+
+    <!-- X-axis labels -->
+    <text x="48" y="240" fill="#62789d" font-family="sans-serif" font-size="10">Mon</text>
+    <text x="128" y="240" fill="#62789d" font-family="sans-serif" font-size="10">Wed</text>
+    <text x="208" y="240" fill="#62789d" font-family="sans-serif" font-size="10">Fri</text>
+    <text x="288" y="240" fill="#62789d" font-family="sans-serif" font-size="10">Sun</text>
+    <text x="368" y="240" fill="#62789d" font-family="sans-serif" font-size="10">Tue</text>
+  </g>
+
+  <!-- Side Activity Widget -->
+  <g transform="translate(530, 155)">
+    <rect width="240" height="260" rx="12" fill="url(#card-grad)" stroke="#263654" stroke-width="1"/>
+    <text x="18" y="30" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700">Recent Deployments</text>
+
+    <!-- Activity Item 1 -->
+    <g transform="translate(18, 50)">
+      <circle cx="8" cy="14" r="5" fill="#00dfd8"/>
+      <text x="22" y="12" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="600">addis-market-tracker</text>
+      <text x="22" y="27" fill="#62789d" font-family="sans-serif" font-size="10">v1.4.2 &middot; FastAPI production</text>
+    </g>
+
+    <!-- Activity Item 2 -->
+    <g transform="translate(18, 95)">
+      <circle cx="8" cy="14" r="5" fill="#ff0080"/>
+      <text x="22" y="12" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="600">veda-voice-assistant</text>
+      <text x="22" y="27" fill="#62789d" font-family="sans-serif" font-size="10">WebRTC VAD stream merged</text>
+    </g>
+
+    <!-- Activity Item 3 -->
+    <g transform="translate(18, 140)">
+      <circle cx="8" cy="14" r="5" fill="#7928ca"/>
+      <text x="22" y="12" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="600">taxi-ale</text>
+      <text x="22" y="27" fill="#62789d" font-family="sans-serif" font-size="10">OSRM road engine cache fix</text>
+    </g>
+
+    <!-- Activity Item 4 -->
+    <g transform="translate(18, 185)">
+      <circle cx="8" cy="14" r="5" fill="#00dfd8"/>
+      <text x="22" y="12" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="600">Katch</text>
+      <text x="22" y="27" fill="#62789d" font-family="sans-serif" font-size="10">Supabase channel hooks</text>
+    </g>
+  </g>
+
+  <!-- Bottom Chips -->
+  <g transform="translate(30, 435)">
+    <rect width="135" height="28" rx="6" fill="#141d2d" stroke="#263654" stroke-width="1"/>
+    <text x="12" y="18" fill="#889fc6" font-family="sans-serif" font-size="11">React 19 &amp; Vite</text>
+
+    <rect x="145" width="135" height="28" rx="6" fill="#141d2d" stroke="#263654" stroke-width="1"/>
+    <text x="157" y="18" fill="#889fc6" font-family="sans-serif" font-size="11">TypeScript</text>
+
+    <rect x="290" width="145" height="28" rx="6" fill="#141d2d" stroke="#263654" stroke-width="1"/>
+    <text x="302" y="18" fill="#889fc6" font-family="sans-serif" font-size="11">Recharts Analytics</text>
+
+    <rect x="445" width="145" height="28" rx="6" fill="#141d2d" stroke="#263654" stroke-width="1"/>
+    <text x="457" y="18" fill="#889fc6" font-family="sans-serif" font-size="11">FastAPI Backend</text>
+  </g>
+</svg>

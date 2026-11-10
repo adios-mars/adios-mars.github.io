@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tg-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182330"/>
+      <stop offset="100%" stop-color="#0f1620"/>
+    </linearGradient>
+    <linearGradient id="tg-bubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b5278"/>
+      <stop offset="100%" stop-color="#1e3a55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window Frame -->
+  <rect width="800" height="500" rx="16" fill="url(#tg-bg)" stroke="#22364a" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="50" rx="16" fill="#202d3d"/>
+  <rect y="32" width="800" height="18" fill="#202d3d"/>
+  <circle cx="28" cy="25" r="6" fill="#ff5f56"/>
+  <circle cx="48" cy="25" r="6" fill="#ffbd2e"/>
+  <circle cx="68" cy="25" r="6" fill="#27c93f"/>
+
+  <!-- Telegram Bot Avatar & Header -->
+  <circle cx="120" cy="25" r="16" fill="#2aabee"/>
+  <text x="120" y="30" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="700" text-anchor="middle">🤖</text>
+  <text x="145" y="24" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="600">Campus Attendance Bot</text>
+  <text x="145" y="39" fill="#6c88a3" font-family="sans-serif" font-size="11">bot &middot; Python Aiogram 3 &middot; SQLite</text>
+
+  <!-- Chat Messages -->
+  <g transform="translate(40, 75)">
+    <!-- Bot Message 1 -->
+    <rect width="480" height="110" rx="12" fill="url(#tg-bubble)"/>
+    <text x="20" y="28" fill="#54c4ff" font-family="sans-serif" font-size="13" font-weight="700">Attendance Manager v2.4 (Active Session)</text>
+    <text x="20" y="52" fill="#ffffff" font-family="sans-serif" font-size="12.5">Course: Software Architecture (SE-402)</text>
+    <text x="20" y="74" fill="#ffffff" font-family="sans-serif" font-size="12.5">Hall: Tech Lab 3 &middot; Time: 10:00 AM &ndash; 12:00 PM</text>
+    <text x="20" y="96" fill="#9ec5e8" font-family="sans-serif" font-size="11.5">Tap below to log present status or request automated PDF.</text>
+
+    <!-- Inline Keyboard Buttons -->
+    <g transform="translate(0, 120)">
+      <rect width="235" height="36" rx="8" fill="#203a54" stroke="#375d85" stroke-width="1"/>
+      <text x="117" y="23" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">✅ Mark Present (One-Tap)</text>
+
+      <rect x="245" width="235" height="36" rx="8" fill="#203a54" stroke="#375d85" stroke-width="1"/>
+      <text x="362" y="23" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">📊 Real-Time Stats</text>
+    </g>
+
+    <!-- Stats Card Response -->
+    <g transform="translate(0, 175)">
+      <rect width="720" height="180" rx="12" fill="#1b2838" stroke="#2c4460" stroke-width="1"/>
+      <text x="24" y="32" fill="#54c4ff" font-family="sans-serif" font-size="14" font-weight="700">SESSION ATTENDANCE SUMMARY</text>
+      
+      <!-- Progress Bar -->
+      <g transform="translate(24, 50)">
+        <rect width="670" height="10" rx="5" fill="#0f1722"/>
+        <rect width="615" height="10" rx="5" fill="#22c55e"/>
+      </g>
+      <text x="24" y="80" fill="#ffffff" font-family="sans-serif" font-size="13">Present: 48 Students (91.8%) &middot; Absent: 4</text>
+      <text x="24" y="104" fill="#8ca4bc" font-family="sans-serif" font-size="12">Database: SQLite with atomic write lock transactions</text>
+
+      <!-- Action Chips -->
+      <g transform="translate(24, 125)">
+        <rect width="180" height="32" rx="6" fill="#173522" stroke="#22c55e" stroke-width="1"/>
+        <text x="90" y="21" fill="#4ade80" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">📄 PDF Export Ready</text>
+
+        <rect x="195" width="180" height="32" rx="6" fill="#203a54" stroke="#375d85" stroke-width="1"/>
+        <text x="285" y="21" fill="#9ec5e8" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">🔒 Admin Verified</text>
+      </g>
+    </g>
+  </g>
+</svg>
